@@ -1,3 +1,4 @@
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -13,7 +14,7 @@ import com.example.plantloversapp.data.Datasource
 fun PlantList() {
     val plants = Datasource.loadPlants()
 
-    LazyColumn {
+    LazyColumn (contentPadding = PaddingValues(bottom = 110.dp)){
         items(plants) { plant ->
             PlantCard(
                 plant = plant

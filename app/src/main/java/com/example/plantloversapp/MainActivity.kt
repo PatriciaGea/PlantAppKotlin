@@ -7,7 +7,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -17,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.plantloversapp.ui.theme.PlantLoversAppTheme
+import com.example.plantloversapp.ui1.Footer
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,15 +27,28 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             PlantLoversAppTheme {
-               Column {
-                   Text(
-                       text = "Plant Lovers",
-                       style = MaterialTheme.typography.headlineMedium,
-                       modifier = Modifier.padding(16.dp)
-                   )
-                   CategoryRow()
-                   PlantList()
-               }
+                Column(
+                    modifier = Modifier.fillMaxSize()
+                ) {
+
+                    Column(
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Spacer(modifier = Modifier.height(66.dp))
+                        Text(
+                            text = "Plant Lovers",
+                            style = MaterialTheme.typography.headlineLarge,
+                            modifier = Modifier.padding(16.dp)
+                        )
+
+                        CategoryRow()
+
+                        PlantList()
+                    }
+
+                    Footer()
+                    Spacer(modifier = Modifier.height(46.dp))
+                }
             }
         }
     }
