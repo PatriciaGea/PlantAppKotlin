@@ -9,11 +9,8 @@ A Android app built with Kotlin and Jetpack Compose that displays a list of plan
 Add your screenshots below:
 
 Home Screen  
-<img src="screenshots/home.png" width="250"/>
-
-
-
-<img src="screenshots/filter.png" width="250"/>
+<img src= "https://github.com/PatriciaGea/PlantLoversApp/blob/master/screenshots/screenshot.png" width="225"/>
+<img src="https://github.com/PatriciaGea/PlantLoversApp/blob/master/screenshots/gif.gif" width="250"/>
 
 
 
