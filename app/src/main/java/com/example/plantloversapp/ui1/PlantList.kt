@@ -9,9 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.plantloversapp.data.Datasource
+import com.example.plantloversapp.model.Plant
 
 @Composable
-fun PlantList() {
+fun PlantList(filteredPlants: List<Plant>) {
     val plants = Datasource.loadPlants()
 
     LazyColumn (contentPadding = PaddingValues(bottom = 110.dp)){
@@ -23,8 +24,9 @@ fun PlantList() {
     }
 }
 @Composable
-fun CategoryRow() {
+fun CategoryRow(onCategorySelected: (String) -> Unit) {
     val categories =listOf(
+        "All",
         "Indoor",
         "Outdoor",
         "Flowers",
@@ -33,7 +35,7 @@ fun CategoryRow() {
     LazyRow {
         items(categories) { category ->
             AssistChip(
-                onClick ={},
+                onClick = {onCategorySelected(category)},
                 label = {
                     Text(category)
                 },

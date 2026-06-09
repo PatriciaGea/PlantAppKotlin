@@ -9,22 +9,26 @@ object Datasource {
             Plant(
                 "Monstera",
                 "Tropical plant very popular.",
-                R.drawable.monstera
+                R.drawable.monstera,
+                category = "Indoor"
             ),
             Plant(
                 "Cactus",
                 "Needs just lit bit of water.",
-                R.drawable.cactus
+                R.drawable.cactus,
+                category = "Cactus"
             ),
             Plant(
                 "Fern",
                 "Loves wet enviroment.",
-                R.drawable.fern
+                R.drawable.fern,
+                category = "Outdoor"
             ),
             Plant(
                 "Orchid",
                 "Elegant flowers.",
-                R.drawable.orchid
+                R.drawable.orchid,
+                category = "Flowers"
             )
             
         )

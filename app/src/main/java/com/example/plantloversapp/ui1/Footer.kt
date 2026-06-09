@@ -1,5 +1,9 @@
 package com.example.plantloversapp.ui1
 
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.foundation.clickable
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,6 +17,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun Footer() {
+    val context = LocalContext.current
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -20,13 +25,15 @@ fun Footer() {
             .padding(16.dp)
     ){
         Text(
-            text ="Links:",
-            style = MaterialTheme.typography.titleMedium
+            text = "App done by Patricia Gea",
+            modifier = Modifier.clickable {
+                val intent = Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://patriciageadev.vercel.app/")
+                )
+                context.startActivity(intent)
+            }
+        )
 
-        )
-        Text(text = "Portfolio: https://patriciageadev.vercel.app/")
-        Text(text = "App done by Patricia Gea",
-            style = MaterialTheme.typography.labelMedium
-        )
     }
 }
