@@ -1,3 +1,6 @@
+
+<img src= "https://github.com/PatriciaGea/PlantLoversApp/blob/master/screenshots/androidvector.png" width="325"/>
+
 #  Plant Lovers App - Android - Kotlin
 
 A Android app built with Kotlin and Jetpack Compose that displays a list of plants using a modern Material Design 3 interface. The app includes categories, filtering, scrollable lists, interactive cards, and a custom footer with external links.
